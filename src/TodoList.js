@@ -45,22 +45,29 @@ function TodoList() {
           <List>
             <ListItem>
               <Grid container sx={{ display: "flex" }}>
-                <Grid xs={10} sx={{display:"flex"}}>
-                    <div>
-                <Checkbox
-                  //onClick={() => handleDone(todo.id)}
-                  checked={false}
-                />
-                <Typography>Project 1</Typography>
-                </div>
-                <div>
-                
-                <Typography>Developer 1</Typography>
-                </div>
+                <Grid xs={10} sx={{ display: "flex", gap:7 }}>
+              
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                   
+                    <Checkbox
+                    sx={{pr:2,pt:0,boxShadow:"none"}}
+                      //onClick={() => handleDone(todo.id)}
+                      checked={false}
+                    />
+                    <div style={{ display: "flex",flexDirection:"column", justifyContent: "center" }}>
+                    <Typography sx={{ fontSize: "16px" }}>Project 1</Typography>
+                    <Typography sx={{ fontSize: "12px" }}>Project Title:Project 1</Typography>
+                    </div>
+                  </div>
+                 
+              
+                  <div>
+                    <Typography sx={{fontSize:"14px"}}>Developer 1</Typography>
+                  </div>
                 </Grid>
-                <Grid  xs={2} sx={{display:"flex",alignContent:"end"}} >
-                <DeleteIcon />
-                <EditIcon />
+                <Grid  sx={{ display: "flex", alignContent: "end",gap:2,alignItems:"flex-end"}}>
+                  <DeleteIcon />
+                  <EditIcon />
                 </Grid>
               </Grid>
             </ListItem>
@@ -69,7 +76,6 @@ function TodoList() {
       </Card>
 
       <BasicModal open={open} handleClose={handleClose}>
-        {/* <FreeLinkCredit handleCloseModal={handleClose} /> */}
         <TodoForm handleCloseModal={handleClose} />
       </BasicModal>
     </Grid>

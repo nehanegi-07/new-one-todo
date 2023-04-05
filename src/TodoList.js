@@ -59,8 +59,6 @@ function TodoList() {
                     <Typography sx={{ fontSize: "12px",color:"#A0A0A0" }}>Project Title: <span style={{ color: "#4B4B4B" }}>Project 1</span></Typography>
                     </div>
                   </div>
-                 
-              
                   <div>
                     <Typography sx={{fontSize:"14px"}}>Developer 1</Typography>
                   </div>

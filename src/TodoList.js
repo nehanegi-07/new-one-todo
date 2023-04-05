@@ -32,7 +32,7 @@ function TodoList() {
             <Typography
               sx={{ fontSize: "25px", color: "#5B5FE8", fontWeight: 900 }}
             >
-              Thursday,10th
+              Thursday,<span style={{ fontWeight: 400 }}>  10th</span>
             </Typography>
             <span>December</span>
           </div>
@@ -56,7 +56,7 @@ function TodoList() {
                     />
                     <div style={{ display: "flex",flexDirection:"column", justifyContent: "center" }}>
                     <Typography sx={{ fontSize: "16px" }}>Project 1</Typography>
-                    <Typography sx={{ fontSize: "12px" }}>Project Title:Project 1</Typography>
+                    <Typography sx={{ fontSize: "12px",color:"#A0A0A0" }}>Project Title: <span style={{ color: "#4B4B4B" }}>Project 1</span></Typography>
                     </div>
                   </div>
                  

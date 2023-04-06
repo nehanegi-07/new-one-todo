@@ -11,7 +11,7 @@ function TodoEditForm({ handleCloseModal, developerList, taskList, taskId }) {
   const [todoDetail, setTodoDetail] = useState({});
 
   const { data, isSuccess } = useQuery(
-    ["todoList"],
+    ["EdittodoList"],
     () => getTodoItemById(taskId),
     {
       keepPreviousData: true,

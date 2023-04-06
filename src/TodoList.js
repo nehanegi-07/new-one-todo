@@ -33,12 +33,13 @@ function TodoList() {
     }
   );
 
+  console.log(data,isSuccess,"newone")
 
   useEffect(() => {
     if (isSuccess) {
-      setTaskList(data.data);
+      setTaskList(data?.data);
     }
-  }, [isSuccess, data]);
+  }, [isSuccess, data?.data]);
 
   const { mutate: deleteTodoTask } = useMutation(deleteTodo, {
     onSettled: () => queryClient.invalidateQueries("todoList"),

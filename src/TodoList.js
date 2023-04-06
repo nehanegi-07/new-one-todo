@@ -63,6 +63,8 @@ function TodoList() {
     deleteTodoTask(taskId);
   };
 
+ 
+
   const today = new Date();
   const dayOfWeek = today.getDay(); // returns the day of the week (0-6)
   const dayOfMonth = today.getDate(); // returns the day of the month (1-31)
@@ -140,7 +142,6 @@ function TodoList() {
                       >
                         <Checkbox
                           sx={{ pr: 2, pt: 0, boxShadow: "none" }}
-                          //onClick={() => handleDone(todo.id)}
                           checked={task?.todo_complete}
                         />
                         <div

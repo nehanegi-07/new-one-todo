@@ -15,6 +15,7 @@ function TodoList() {
   const queryClient = useQueryClient();
   const [open, setOpen] = useState(false);
   const [taskList, setTaskList] = useState([]);
+  console.log(taskList,"taskList")
   const [addTodo, setAddTodo] =useState(false);
   const [editTaskId, setEditTaskId] = useState(null);
   const handleAddTodoFormClose = () => setAddTodo(false);

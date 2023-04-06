@@ -6,6 +6,7 @@ import { notifySuccess, notifyError } from "./Messages";
 import { getTodoItemById, UpdateTodo } from "../services/service";
 
 function TodoEditForm({ handleCloseModal, developerList, taskList, taskId }) {
+    console.log(taskList,"taskList1")
   const queryClient = useQueryClient();
   const [todoDetail, setTodoDetail] = useState({});
 
@@ -49,7 +50,11 @@ function TodoEditForm({ handleCloseModal, developerList, taskList, taskId }) {
   }
 
   const onSave = () => {
-    mutate({ data: todoDetail, todoId: taskId });
+    mutate({ data:  {
+        title:todoDetail.title,
+        todo_complete:todoDetail.todo_complete,
+        todo_assign_to:todoDetail.todo_assign_to
+    }, todoId: taskId });
   };
 
   return (
@@ -80,8 +85,8 @@ function TodoEditForm({ handleCloseModal, developerList, taskList, taskId }) {
             id="Select Project"
             onChange={handleChange}
           >
-            {taskList.map((option) => (
-              <MenuItem key={option.id} value={option.id}>
+            {taskList?.map((option) => (
+              <MenuItem key={option._id} value={option.title}>
                 {option.title}
               </MenuItem>
             ))}

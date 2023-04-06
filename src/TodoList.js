@@ -15,7 +15,6 @@ function TodoList() {
   const queryClient = useQueryClient();
   const [open, setOpen] = useState(false);
   const [taskList, setTaskList] = useState([]);
-  console.log(taskList,"taskList")
   const [addTodo, setAddTodo] =useState(false);
   const [editTaskId, setEditTaskId] = useState(null);
   const handleAddTodoFormClose = () => setAddTodo(false);
@@ -32,8 +31,6 @@ function TodoList() {
       keepPreviousData: true,
     }
   );
-
-  console.log(data,isSuccess,"newone")
 
   useEffect(() => {
     if (isSuccess) {
@@ -56,13 +53,6 @@ function TodoList() {
       );
     },
   });
-
-  //   const taskListt=[{
-  //     _id:1,
-  //     title:'Projct 2',
-  //     todo_complete:false,
-  //     todo_assign_to:'Developer 2'
-  // }]
 
   const handleOnEdit = (e, taskId) => {
     setOpen(true);

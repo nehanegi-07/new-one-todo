@@ -6,7 +6,7 @@ import { notifySuccess, notifyError } from "./Messages";
 import { getTodoItemById, UpdateTodo } from "../services/service";
 
 function TodoEditForm({ handleCloseModal, developerList, taskList, taskId }) {
-    console.log(taskList,"taskList1")
+
   const queryClient = useQueryClient();
   const [todoDetail, setTodoDetail] = useState({});
 
